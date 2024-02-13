@@ -1,14 +1,16 @@
 :root {
   --secondary-color: #fff050; /* Set your desired color value */
-  --apvertise: #64bbf7;
+  --rubiese: #64bbf7;
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+a,
 a {
   text-decoration: none;
+  color: inherit;
 }
 a:visited {
   color: rgb(225, 225, 225);
@@ -330,36 +332,97 @@ p {
 
 /* 
 =====================================================
-              APVERTIS CASE STUDY PAGE STYLES
+              RUBIES CASE STUDY PAGE STYLES
 =====================================================
 */
 
-.apvertis-land {
+.rubies-land {
   margin: 2rem 0;
 }
-.apvertis-h {
+.rubies-h {
   font-size: 3.5rem;
 }
-.apvertis-h span {
-  color: var(--apvertise);
+.rubies-h span {
+  color: var(--rubiese);
 }
-.apvertis-land p {
-  color: var(--apvertise);
+.rubies-land p {
+  color: var(--rubiese);
 }
-.apvertis-sub-h {
-  font-size: 1.5rem;
+.rubies-sub-h {
+  font-size: 2rem;
 }
-.apvertis-sub-h::after {
+.rubies-sub-h::after {
   content: "";
   display: block;
   margin: 0.5rem 0;
   width: 4.3rem;
   height: 0.5rem;
-  background-color: var(--apvertise);
+  background-color: var(--rubiese);
 }
-
+.rubies-overviews {
+  display: flex;
+  gap: 12rem;
+  /* flex-wrap: wrap; */
+}
+.rubies-overview-text p {
+  line-height: 2rem;
+}
+.rubies-overview-imgCont {
+  width: 100%;
+}
+.rubies-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 4rem 0;
+  gap: 1rem;
+}
+.rubies-details .rubies-details-list {
+  width: 50%;
+}
+.rubies-details ul {
+  margin: 1.4rem;
+}
+.rubies-details ul li {
+  line-height: 1.5rem;
+}
+.rubies-tools {
+  width: 100%;
+  margin: 3rem 0;
+}
+.rubies-tools img {
+  margin: 1rem 0;
+}
 @media screen and (max-width: 1200px) {
-  .apvertis-h {
+  .rubies-h {
     font-size: 2rem;
+  }
+  .rubies-overviews {
+    gap: 1rem;
+    /* flex-wrap: wrap; */
+  }
+  .rubies-overview-text p {
+    line-height: 1.5rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .rubies-overviews {
+    flex-direction: column;
+    gap: 1rem;
+    /* flex-wrap: wrap; */
+  }
+  .rubies-overview-img {
+    width: 100%;
+  }
+  .rubies-details {
+    display: block;
+  }
+  .rubies-details .rubies-details-list {
+    width: 100%;
+  }
+  .rubies-details .rubies-details-list p {
+    margin: 2rem 0.5rem;
+  }
+  .rubies-tools img {
+    width: 100%;
   }
 }
