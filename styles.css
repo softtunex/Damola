@@ -1,6 +1,7 @@
 :root {
   --secondary-color: #fff050; /* Set your desired color value */
   --rubiese: #64bbf7;
+  --apvertises: #489e85;
 }
 * {
   padding: 0;
@@ -14,6 +15,9 @@ a {
 }
 a:visited {
   color: rgb(225, 225, 225);
+}
+br {
+  margin: 1rem o;
 }
 /* 
 =====================================================
@@ -339,17 +343,19 @@ p {
 .rubies-land {
   margin: 2rem 0;
 }
-.rubies-h {
+.rubies-h,
+.apvertise-h {
   font-size: 3.5rem;
+  margin: 2rem 0;
 }
-.rubies-h span {
-  color: var(--rubiese);
-}
+.rubies-h span,
 .rubies-land p,
 .insights {
   color: var(--rubiese);
 }
-.rubies-sub-h {
+
+.rubies-sub-h,
+.apvertise-sub-h {
   font-size: 2rem;
 }
 .rubies-sub-h::after {
@@ -446,4 +452,31 @@ p {
   .rubies-tools img {
     width: 100%;
   }
+}
+
+/* 
+=====================================================
+              RUBIES CASE STUDY PAGE STYLES END
+=====================================================
+*/
+
+/* 
+=====================================================
+              Apvertise CASE STUDY PAGE STYLES
+=====================================================
+*/
+.apvertise-sub-h::after {
+  content: "";
+  display: block;
+  margin: 0.5rem 0;
+  width: 4.3rem;
+  height: 0.5rem;
+  background-color: var(--apvertises);
+}
+.apvertise-land p,
+.apvertise-h span {
+  color: var(--apvertises);
+}
+.apvertise-overview-sec {
+  margin-top: 2rem;
 }
