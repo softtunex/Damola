@@ -474,9 +474,64 @@ p {
   background-color: var(--apvertises);
 }
 .apvertise-land p,
-.apvertise-h span {
+.apvertise-h span,
+.apverstise-col {
   color: var(--apvertises);
 }
 .apvertise-overview-sec {
-  margin-top: 2rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.rubies-problem {
+  display: flex;
+  gap: 5rem;
+}
+.rubies-problem-imgCont {
+  width: 100%;
+}
+.rubies-problem-img {
+  width: 100%;
+}
+.apverstise-col {
+  text-align: center;
+  margin: 1rem 0;
+}
+.image-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+  justify-content: space-between;
+  /* padding: 10px; */
+}
+
+.apvertise-solution-image img {
+  width: 100%;
+  margin-top: 1rem;
+}
+.apvertise-solution-image p {
+  text-align: center;
+}
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+ol li {
+  line-height: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .image-container {
+    grid-template-columns: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .rubies-problem-img {
+    width: 100%;
+  }
+  .rubies-problem {
+    flex-direction: column;
+  }
 }
