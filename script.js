@@ -28,19 +28,43 @@
 // }
 // console.log("Happy");
 const form = document.querySelector("form");
+const firstName = document.querySelector("#firstName");
+const lastName = document.querySelector("#lastName");
+const email = document.querySelector("#email");
+const message = document.querySelector("#message");
+const modal = document.getElementById("contactModal");
 function openModal() {
+  document.body.classList.add("modal-open");
+  modal.style.display = "flex";
+  // Add click event listener to modal background
+  window.addEventListener("click", outsideClick);
+
   document.getElementById("contactModal").style.display = "flex";
+  window.addEventListener("click", outsideClick);
 }
 
 function sendMessage() {
+  const bodyMessage = `<p>Hello,</p>
+  
+  <p>Someone is trying to reach out to you through your website's contact form. Please find the details below:</p>
+  
+  <ul>
+    <li><strong>Name:</strong> ${firstName?.value} ${lastName?.value}</li>
+    <li><strong>Email:</strong> ${email?.value}</li>
+    <li><strong>Message:</strong><br>${message?.value}</li>
+  </ul>
+
+  <p>Kindly address this inquiry at your earliest convenience.</p>
+
+  <p>Best regards,<br>`;
   Email.send({
     Host: "smtp.elasticemail.com",
-    Username: "iamtunex1@gmail.com",
+    Username: "adedamolaj6@gmail.com",
     Password: "59C3F96B90E223DE0E5003FD6BAE450FF3D6",
-    To: "iamtunex1@gmail.com",
-    From: "iamtunex1@gmail.com",
-    Subject: "This is the subject",
-    Body: "And this is the body",
+    To: "adedamolajokee@gmail.com",
+    From: "adedamolaj6@gmail.com",
+    Subject: "Someone is trying to reach out to you",
+    Body: bodyMessage,
   }).then((message) => alert(message));
 }
 form.addEventListener("submit", (e) => {
@@ -51,8 +75,15 @@ form.addEventListener("submit", (e) => {
 
 function closeModal() {
   document.getElementById("contactModal").style.display = "none";
+  window.removeEventListener("click", outsideClick);
+  document.body.classList.remove("modal-open");
 }
-
+function outsideClick(e) {
+  // Close the modal if the click is outside the modal content
+  if (e.target === modal) {
+    closeModal();
+  }
+}
 // Problem: GIven a number 'n', find the first 'n' elements of the Fibonacci sequence
 
 const Fibonacci = (n) => {
