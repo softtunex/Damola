@@ -27,6 +27,31 @@
 //   star.style.top = `${topPos}vh`;
 // }
 // console.log("Happy");
+const form = document.querySelector("form");
+function openModal() {
+  document.getElementById("contactModal").style.display = "flex";
+}
+
+function sendMessage() {
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "iamtunex1@gmail.com",
+    Password: "59C3F96B90E223DE0E5003FD6BAE450FF3D6",
+    To: "iamtunex1@gmail.com",
+    From: "iamtunex1@gmail.com",
+    Subject: "This is the subject",
+    Body: "And this is the body",
+  }).then((message) => alert(message));
+}
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendMessage();
+  closeModal();
+});
+
+function closeModal() {
+  document.getElementById("contactModal").style.display = "none";
+}
 
 // Problem: GIven a number 'n', find the first 'n' elements of the Fibonacci sequence
 
@@ -263,16 +288,16 @@ function lengthOfLongestSubstring(s) {
     }
 
     charSet.add(currentChar);
-      maxLength = Math.max(maxLength, end - start + 1);
-    }
+    maxLength = Math.max(maxLength, end - start + 1);
+  }
 
-    return maxLength;
+  return maxLength;
 }
 // console.log(lengthOfLongestSubstring("abcabcbb")); //3
 // console.log(lengthOfLongestSubstring("bbbbb")); //0
 // console.log(lengthOfLongestSubstring("pwwkew")); //3
 
-var longestPalindrome = function(s) {
+var longestPalindrome = function (s) {
   let maxLength = 0;
   let start = 0;
   let charSet = new Set();
@@ -285,9 +310,9 @@ var longestPalindrome = function(s) {
     }
 
     charSet.add(currentChar);
-      maxLength = Math.max(maxLength, end - start + 1);
-    }
+    maxLength = Math.max(maxLength, end - start + 1);
+  }
 
-    return maxLength;
+  return maxLength;
 };
-console.log(lengthOfLongestSubstring("abcabcbb"))
+console.log(lengthOfLongestSubstring("abcabcbb"));

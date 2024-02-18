@@ -36,7 +36,31 @@
         experiences through empirical research and conceptualizing solutions to
         address real-life issues while assisting in achieving business goals.
       </p>
-      <button class="title-button"><b>Get in touch</b></button>
+      <button class="title-button" onclick="openModal()">
+        <b>Get in touch</b>
+      </button>
+      <!-- Modal -->
+
+      <div class="modal" id="contactModal">
+        <div class="modal-content">
+          <h2>Let's create the next innovative solution together 🤝</h2>
+          <form action="#">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required />
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
     </section>
     <section>
       <h1 class="case-study-h">Case Studies</h1>
@@ -92,7 +116,7 @@
           <br />
           <p style="line-height: 2rem">Lagos, NG ・ May 2023 - August 2023</p>
           <br />
-          <a href="#">Read More → </a>
+          <a href="union-bank.html">Read More → </a>
         </div>
         <div class="case-studies-imgCont">
           <img
@@ -162,5 +186,6 @@
       <div style="text-align: center">© Copyright 2023. Adedamolajoke</div>
     </footer>
   </body>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="script.js"></script>
 </html>
