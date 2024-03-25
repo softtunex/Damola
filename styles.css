@@ -5,7 +5,7 @@
 }
 
 @font-face {
-  font-family: "Founders Grotesk";
+  font-family: "Test Founders Grotesk";
   src: url("assets/fonts/Test\ Founders\ Grotesk\ 400.otf") format("opentype");
   /* Add other font formats if available */
   font-weight: normal;
@@ -18,7 +18,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Founders Grotesk", sans-serif;
+  font-family: "Test Founders Grotesk", sans-serif;
 }
 a,
 a {
