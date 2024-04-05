@@ -37,6 +37,9 @@ ol,
 ul {
   font-size: 18px;
 }
+.word-resp {
+  width: 50%;
+}
 /* 
 =====================================================
               LANDING PAGE STYLES 
@@ -346,6 +349,9 @@ body.modal-open {
   }
 }
 @media screen and (max-width: 768px) {
+  .word-resp {
+    width: 100%;
+  }
   .body-style {
     padding: 3rem 1rem;
   }
